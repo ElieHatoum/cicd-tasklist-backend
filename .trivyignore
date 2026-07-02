@@ -1,0 +1,10 @@
+# Trivy ignore file — accepted / non-exploitable findings.
+# Each entry must include a justification.
+
+# CVE-2026-33671 — picomatch ReDoS via crafted extglob patterns.
+# Source: picomatch@4.0.3 bundled inside the npm CLI shipped with the
+# node:22-alpine base image (/usr/local/lib/node_modules/npm/...).
+# Not exploitable here: npm is a build/CLI tool and is never invoked at
+# runtime in the production container (CMD runs `node dist/server.js`).
+# Our own dependency tree already uses the patched picomatch@4.0.4 (dev-only).
+CVE-2026-33671

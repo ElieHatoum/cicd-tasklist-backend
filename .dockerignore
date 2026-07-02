@@ -1,0 +1,16 @@
+node_modules
+dist
+coverage
+reports
+.env
+.env.*
+*.log
+.git
+.gitignore
+.scannerwork
+prisma/test.db
+prisma/test.db-journal
+prisma/schema-test.prisma
+src/__tests__
+vitest.config.ts
+sonar-project.properties
